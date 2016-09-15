@@ -12,7 +12,6 @@ using namespace std;    //Most system libraries under the standard namespace
 //User Libraries
 
 //Global Constants
-const float CNVtS=100;   //Conversion from cents to dollars
 
 //Function Prototypes
 
@@ -33,6 +32,7 @@ int main(int argc, char** argv) {
     cin>>n;
     //Process the input by mapping to the output
     Money=(q*Qrtr)+(n*Nikl)+(d*Dime);    //Total Value of money in cents
+    
     //Display Information
     cout<<"Number of quarters(25¢) = "<<q<<endl;
     cout<<"Number of dimes(10¢) = "<<d<<endl;
