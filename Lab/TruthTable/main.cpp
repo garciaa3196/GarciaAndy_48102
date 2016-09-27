@@ -44,6 +44,7 @@ int main(int argc, char** argv) {
     cout<<endl;
     
     //Input values for second row of the truth table
+    x=true;
     y=false;
     
     //Display the second row of the truth table
@@ -64,6 +65,7 @@ int main(int argc, char** argv) {
     
     //Input values for third row of the truth table
     x=false;
+    y=true;
     
     //Display the third row of the truth table
     cout<<(x?'T':'F')<<" ";
