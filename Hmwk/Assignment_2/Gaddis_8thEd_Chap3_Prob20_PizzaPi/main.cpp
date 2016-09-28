@@ -1,7 +1,7 @@
 /* 
  * File:   main.cpp
  * Author: Andy Garcia
- * Created on September 22, 2016, 12:07 PM
+ * Created on September 28, 2016, 2:00 PM
  * Purpose: Calculate the number of slices that a round pizza of 
  *          any size can have
  */
@@ -14,7 +14,7 @@ using namespace std;
 //User Libraries 
 
 //Global Constants
-float PI=3.14159;        //Value of Pi
+float PI=3.14159;        //Value of Pi from the book
 
 //Function Prototypes
 
