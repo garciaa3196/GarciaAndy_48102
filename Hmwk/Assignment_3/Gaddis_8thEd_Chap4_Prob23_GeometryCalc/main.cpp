@@ -14,7 +14,7 @@ using namespace std;
 //User Libraries Here
 
 //Global Constants
-const float PI=3.14159;     //Value of PI from the book
+float PI=3.14159;     //Value of PI from the book
 
 //Function Prototypes Here
 
@@ -26,8 +26,8 @@ int main(int argc, char** argv) {
                    width,   //Width of Rectangle in inches
                    base,    //Base of a Triangle in inches
                    height,  //Height of Triangle in inches
-                   input,   //Choose between the type of shape to calculate area
-                   areaC,   //Area of Circle in inches
+                   input;   //Choose between the type of shape to calculate area
+    float          areaC,   //Area of Circle in inches
                    areaR,   //Area of Rectangle in inches
                    areaT;   //Area of Rectangle in inches
     
@@ -71,15 +71,26 @@ int main(int argc, char** argv) {
     areaT=(base*height)/2;        //Area of a Triangle in inches
     
     //Process Values - Map Inputs to Outputs
-    if(input=1){
-        cout<<"Input the radius of a circle in inches"<<endl;
-        cin>>radius;
-        cout<<"Radius of the circle = "<<radius<<" inches"<<endl;
-        cout<<"Area of the circle   = "<<areaC<<" inches"<<endl;
+    switch(input){
+        case 1:cout<<"Input the radius of the circle in inches"<<endl;
+               cin>>radius;
+               cout<<"Radius of the circle = "<<radius<<" inches"<<endl;
+               cout<<"Area of the circle   = "<<areaC<<" inches"<<endl;break;
+        case 2:cout<<"Input the length and width of the rectangle in inches"
+                <<endl;
+               cin>>length>>width;
+               cout<<"Length of rectangle = "<<length<<" inches"<<endl;
+               cout<<"Width of rectangle = "<<width<<" inches"<<endl;
+               cout<<"Area of rectangle = "<<areaR<<" inches"<<endl;break;
+        case 3:cout<<"Input the base and height of the triangle in inches"
+                <<endl;
+               cin>>base>>height;
+               cout<<"Base of Triangle = "<<base<<" inches"<<endl;
+               cout<<"Height of Triangle = "<<height<<" inches"<<endl;
+               cout<<"Area of Triangle = "<<areaT<<" inches"<<endl;break;
+        case 4:cout<<"End"<<endl;
     }
-    
-   
-    //Display Output
+               
     
     //Exit
     return 0;
