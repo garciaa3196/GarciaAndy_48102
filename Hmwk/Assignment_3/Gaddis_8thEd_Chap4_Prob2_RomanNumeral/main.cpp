@@ -22,6 +22,7 @@ int main(int argc, char** argv) {
     unsigned short number;  
     
     //Input or initialize values Here
+    cout<<"This program shows the roman numeral equivalent of a number"<<endl;
     cout<<"Input a number between 1 and 10:"<<endl;
     cin>>number;
     
@@ -31,19 +32,21 @@ int main(int argc, char** argv) {
         return 1;
     }
     
-    //Process Values - Map Inputs to Outputs
+    //Process Values - Map input to output
     switch(number){
-        case 1: cout<<"Roman Numeral: I"<<endl;break;
-        case 2: cout<<"Roman Numeral: II"<<endl;break;
-        case 3: cout<<"Roman Numeral: III"<<endl;break;
-        case 4: cout<<"Roman Numeral: IV"<<endl;break;
-        case 5: cout<<"Roman Numeral: V"<<endl;break;
-        case 6: cout<<"Roman Numeral: VI"<<endl;break;
-        case 7: cout<<"Roman Numeral: VII"<<endl;break;
+        case 1: cout<<number<<" = I"<<endl;break;
+        case 2: cout<<number<<" = II"<<endl;break;
+        case 3: cout<<number<<" = III"<<endl;break;
+        case 4: cout<<number<<" = IV"<<endl;break;
+        case 5: cout<<number<<" = V"<<endl;break;
+        case 6: cout<<number<<" = VI"<<endl;break;
+        case 7: cout<<number<<" = VII"<<endl;break;
+        case 8: cout<<number<<" = VIII"<<endl;break; 
+        case 9: cout<<number<<" = IX"<<endl;break;
+        case 10: cout<<number<<" = X"<<endl;break;
+            
+            
     }
-    
-   
-    //Display Output
     
     //Exit
     return 0;
