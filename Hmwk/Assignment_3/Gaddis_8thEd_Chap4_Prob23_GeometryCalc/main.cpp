@@ -8,7 +8,6 @@
 
 //System Libraries Here
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 //User Libraries Here
@@ -66,32 +65,34 @@ int main(int argc, char** argv) {
     }
     
     //Calculations Here
-    areaC=PI*radius*radius;      //Area of a Circle in inches
-    areaR=length*width;          //Area of a Rectangle in inches
-    areaT=(base*height)/2;        //Area of a Triangle in inches
+    
+    
+    
     
     //Process Values - Map Inputs to Outputs
     switch(input){
         case 1:cout<<"Input the radius of the circle in inches"<<endl;
                cin>>radius;
+               areaC=PI*radius*radius;      //Area of a Circle in inches
                cout<<"Radius of the circle = "<<radius<<" inches"<<endl;
-               cout<<"Area of the circle   = "<<areaC<<" inches"<<endl;break;
+               cout<<"Area of the circle   = "<<areaC<<" sq. inches"<<endl;break;
         case 2:cout<<"Input the length and width of the rectangle in inches"
                 <<endl;
                cin>>length>>width;
+               areaR=length*width;          //Area of a Rectangle in inches
                cout<<"Length of rectangle = "<<length<<" inches"<<endl;
                cout<<"Width of rectangle = "<<width<<" inches"<<endl;
-               cout<<"Area of rectangle = "<<areaR<<" inches"<<endl;break;
+               cout<<"Area of rectangle = "<<areaR<<" sq. inches"<<endl;break;
         case 3:cout<<"Input the base and height of the triangle in inches"
                 <<endl;
                cin>>base>>height;
+               areaT=(base*height)/2;        //Area of a Triangle in inches
                cout<<"Base of Triangle = "<<base<<" inches"<<endl;
                cout<<"Height of Triangle = "<<height<<" inches"<<endl;
-               cout<<"Area of Triangle = "<<areaT<<" inches"<<endl;break;
+               cout<<"Area of Triangle = "<<areaT<<" sq. inches"<<endl;break;
         case 4:cout<<"End"<<endl;
     }
-               
-    
+  
     //Exit
     return 0;
 }
