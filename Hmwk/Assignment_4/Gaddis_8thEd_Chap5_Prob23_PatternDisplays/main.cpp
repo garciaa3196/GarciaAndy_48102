@@ -30,11 +30,22 @@ int main(int argc, char** argv) {
     cin>>rows;
     
     //Table Setup
-    cout<<"-------------------------------------------"<<endl;
-    cout<<"Pattern A                    "<<"Pattern B"<<endl;
-    cout<<"-------------------------------------------"<<endl;
+    cout<<"----------------------"<<endl;
+    cout<<"Pattern A"<<endl;
+    cout<<"----------------------"<<endl;
     //Pattern A
     for(int m=1;m<=rows;m++){
+        for(int p=1;p<=m;p++){
+            cout<<A;
+        }
+        cout<<"\n";
+    }
+    cout<<endl;
+    //Pattern B
+    cout<<"----------------------"<<endl;
+    cout<<"Pattern B"<<endl;
+    cout<<"----------------------"<<endl;
+    for(int m=rows;m>=1;m--){
         for(int p=1;p<=m;p++){
             cout<<A;
         }

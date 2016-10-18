@@ -23,13 +23,12 @@ int main(int argc, char** argv) {
     unsigned short TotCal;   //Total Calories Burned
                     
     
-    //Process/Calculations Here             
+    //Loop             
     for(unsigned short min=0; min<=30; min+=5){
         TotCal=min*cal;
         cout<<TotCal<<" calories burned after "<<min<<" minutes"<<endl;
     }
-    //Output Located Here
-    
+ 
     //Exit
     return 0;
 }

@@ -26,7 +26,7 @@ int main(int argc, char** argv) {
     int number,answer;
     
     //Input values
-    cout<<"THis is the guessing game"<<endl;
+    cout<<"This is the guessing game"<<endl;
     cout<<"Choose a range for the number to guess"<<endl;
     cin>>range;
     
@@ -43,7 +43,6 @@ int main(int argc, char** argv) {
         else if(answer<number)cout<<"Guess too low"<<endl;
         else{
             cout<<"You guessed the number"<<endl;
-            exit(0);
         }
     }
    
