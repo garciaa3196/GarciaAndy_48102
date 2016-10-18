@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andy Garcia
  * Created on October 11, 2016, 9:52 AM
- * Purpose:  Convert 24-hour notation to 12-hour notation
+ * Purpose:  Determine the number of calories for a given amount of minutes
  */
 
 //System Libraries Here
@@ -19,19 +19,15 @@ using namespace std;
 //Program Execution Begins Here
 int main(int argc, char** argv) {
     //Declare all Variables
-    unsigned short  cal=3.6f,   //Calories burned per minute
-                    min=0,        //Time spent burning calories
-                    BCal;      //Total calories burned
+    float  cal=3.6;          //Calories burned per minute
+    unsigned short TotCal;   //Total Calories Burned
                     
-    //Input or initialize values
-    
     
     //Process/Calculations Here             
-    BCal=min*cal;
-    for(unsigned short min=0; min==30; min+=5)
-        BCal=min*cal;
-        cout<<"The minutes spent burning calories is "<<min<<endl;
-        cout<<"The amount of calories burned is "<<BCal<<endl;
+    for(unsigned short min=0; min<=30; min+=5){
+        TotCal=min*cal;
+        cout<<TotCal<<" calories burned after "<<min<<" minutes"<<endl;
+    }
     //Output Located Here
     
     //Exit

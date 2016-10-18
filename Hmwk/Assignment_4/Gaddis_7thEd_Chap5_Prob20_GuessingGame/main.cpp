@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andy Garcia
  * Created on October 13, 2016, 11:32 AM
- * Purpose:   
+ * Purpose: Create a Guessing Game  
  */
 
 //System Libraries Here
