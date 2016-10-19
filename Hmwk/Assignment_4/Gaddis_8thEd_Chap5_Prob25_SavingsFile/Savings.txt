@@ -1,0 +1,7 @@
+---------------------
+Totals after Month 2
+---------------------
+Total Balance: $1008.35
+Total amount deposited: $0.00
+Total amount withdrawn: $0.00
+Total Interest Earned: $8.35

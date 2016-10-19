@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Andy Garcia
  * Created on October 18, 2016, 11:02 AM
- * Purpose:  Convert Celsius temperature to fahrenheit
+ * Purpose:  Convert Celsius temperature to Fahrenheit
  */
 
 //System Libraries Here

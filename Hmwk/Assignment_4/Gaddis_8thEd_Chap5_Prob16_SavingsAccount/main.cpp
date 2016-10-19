@@ -9,6 +9,7 @@
 //System Libraries Here
 #include <iostream>     //Input/Output Library
 #include <iomanip>      //Formatting
+#include <cstdlib>
 using namespace std;
 
 //User Libraries Here
@@ -28,9 +29,8 @@ int main(int argc, char** argv) {
             totBal,             //Total Balance 
             rate,               //Annual Interest rate as a decimal
             monRate,            //Monthly Interest Rate
-            monInt,             //Monthly Interest Earned
-            EarnInt;            //Total Interest Earned
-    int     time,               //Time since account was established in months
+            EarnInt=0;          //Total Interest Earned
+    int     months,             //Time since account was established in months
             count;              //Counter
                     
     //Input Values - Starting Balance,Interest rate, Time passed
@@ -39,14 +39,14 @@ int main(int argc, char** argv) {
     cout<<"Input the interest rate (ex. .07)"<<endl;
     cin>>rate;
     cout<<"Input the time that passed in months"<<endl;
-    cin>>time;
+    cin>>months;
     
    //Process/Calculations
     totBal=startB;          //Total Balance to start
     monRate=rate/12;
     
     //Loop
-    for(int count=1;count<=time;++count){
+    for(int count=1;count<=months;++count){
         cout<<"------------"<<endl;
         cout<<"Month "<<count<<endl;
         cout<<"------------"<<endl;
@@ -62,13 +62,13 @@ int main(int argc, char** argv) {
         EarnInt+=(totBal*monRate);
         totBal+=(monRate*totBal);
         //Input Validation
-        if(Depo<0||With<0||startB<0){
-            cout<<"Error - Negative Value not allowed"<<endl;
+        if(Depo<0||With<0||totBal<0){
+            cout<<"Error - Negative Value/Balance not allowed"<<endl;
             exit(1);
         }
     }
     cout<<"---------------------"<<endl;
-    cout<<"Totals after Month "<<time<<endl;
+    cout<<"Totals after Month "<<months<<endl;
     cout<<"---------------------"<<endl;
     cout<<fixed<<showpoint<<setprecision(2);
     cout<<"Total Balance: $"<<totBal<<endl;

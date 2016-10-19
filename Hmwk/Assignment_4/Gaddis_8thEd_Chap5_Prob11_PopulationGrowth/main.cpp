@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     //Declare all Variables
     int     PIsize,     //Initial Population size
             PFsize,     //Final Population size
-            growth,     //Population Growth as a %
+            growth,     //Population Growth
             days,       //Number of days passed
             count;      //Counter
     float   rate;       //Growth as a decimal
@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     //Input Values
     cout<<"Input the initial size of the population"<<endl;
     cin>>PIsize;
-    cout<<"Input the growth as a perentage (no negatives)"<<endl;
+    cout<<"Input the growth as a positive integer"<<endl;
     cin>>growth;
     cout<<"Input the number of days passed"<<endl;
     cin>>days;

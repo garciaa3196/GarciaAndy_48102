@@ -8,7 +8,7 @@
 //System Libraries Here
 #include <iostream>     //Input/Output Library
 #include <iomanip>      //Formatting
-#include <cmath>       //exp function 
+#include <cstdlib>       
 using namespace std;
 
 //User Libraries Here
@@ -21,37 +21,28 @@ using namespace std;
 int main(int argc, char** argv) {
     //Declare all Variables
     char A='+';
-    int rows,   //Number of rows  in pattern
+    int rows=10,   //Number of rows  in pattern
         m=1,    
-        p=1;    
-    
-    //Input Value
-    cout<<"Input the number of rows"<<endl;
-    cin>>rows;
+        p=1,
+    count=0;
     
     //Table Setup
-    cout<<"----------------------"<<endl;
-    cout<<"Pattern A"<<endl;
-    cout<<"----------------------"<<endl;
-    //Pattern A
+    cout<<"----------------------------------------------"<<endl;
+    cout<<"Pattern A                          Pattern B"<<endl;
+    cout<<"----------------------------------------------"<<endl;
+    //Patterns Loop
+    count++;
     for(int m=1;m<=rows;m++){
         for(int p=1;p<=m;p++){
             cout<<A;
         }
-        cout<<"\n";
     }
-    cout<<endl;
-    //Pattern B
-    cout<<"----------------------"<<endl;
-    cout<<"Pattern B"<<endl;
-    cout<<"----------------------"<<endl;
     for(int m=rows;m>=1;m--){
         for(int p=1;p<=m;p++){
             cout<<A;
         }
         cout<<"\n";
     }
-    
     
     
     //Exit
