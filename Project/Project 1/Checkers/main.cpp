@@ -21,7 +21,7 @@ void move();
 void posLeap();     //Possible Leap
 void gameover();
 void king();
-bool game=true;
+bool game;
 bool movcheck();
 bool leap;
 
@@ -66,6 +66,12 @@ int main(int argc, char** argv) {
         move();
         king();
         gameover();
+        
+        //Open player file and write inputs to file
+        out.open("Player.dat");
+        out>>rows>>cols;
+        cout<<"Rows = "<<rows<<" Columns = "<<cols<<endl;
+        
     }
     if(Turn=='B'){
         cout<<"(Red) Player 2 Wins!"<<endl;
@@ -132,6 +138,7 @@ void posLeap(){
 void king(){
     
 }
+bool game=true;
 void gameover(){
-    
+
 }
