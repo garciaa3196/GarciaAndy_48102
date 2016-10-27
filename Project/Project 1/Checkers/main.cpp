@@ -9,7 +9,7 @@
 #include <iomanip>      //Formatting
 #include <fstream>      //File I/O
 #include <string>       //Strings
-using namespace std;    //Namespace used in System Library
+using namespace std;    //Name-space used in System Library
 
 //User Libraries
 
@@ -161,15 +161,43 @@ bool movcheck(int &row1,int &col1,int &row2,int &col2,char &Turn,char (&board)[8
     }
     //Piece is leaping/jumping?
     if(row2>row1 +1 ||row2<row1 -1){
-        //Too far of a Leap
+        //Too far/short of a Leap
         if(row2>row1 +2 || row2<row1 -2){
             leap=false;
             return false;
         }
-        //WORK IN PROGRESS
+        //Check for exactly two columns moved for a leap
+        leap=true;
+        return true;
+        if((col2!=(col1+2))&&(col2!=(col1-2))){
+            leap=false;
+            return false;
+        }
+        //Leaping over another piece
+        if((row2>row1)&&(col2>col1)){
+            if(board[row2-1][col2-1]==' '){
+                leap=false;
+                return false;
+            }
+        }else if(row2<row1&&col2>col1){
+            if(board[row2 +1][col2 -1]==' '){
+                leap=false;
+                return false;
+            }
+        }else if(row2>row1&&col2<col1){
+            if(board[row2-1][col2+1]==' '){
+                leap=false;
+                return false;
+            }
+        }else if(row2<row1&&col2<col1){
+            if(board[row2+1][col2+1]){
+                leap=false;
+                return false;
+            }
+        }
     }
-    
-    
+    leap=false;
+    return false;
 }
 void Leap(int &row1,int &col1,int &row2,int &col2,char &Turn,char (&board)[8][8]){
     char ans;       //Choose to jump more than once
