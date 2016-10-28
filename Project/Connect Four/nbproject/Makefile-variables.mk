@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Cygwin-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin-Windows
+CND_PLATFORM_Debug=Cygwin_2-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_2-Windows
 CND_ARTIFACT_NAME_Debug=connect_four
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin-Windows/connect_four
-CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin-Windows/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_2-Windows/connect_four
+CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_2-Windows/package
 CND_PACKAGE_NAME_Debug=connectfour.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin-Windows/package/connectfour.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_2-Windows/package/connectfour.tar
 # Release configuration
-CND_PLATFORM_Release=Cygwin-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Cygwin-Windows
+CND_PLATFORM_Release=Cygwin_2-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_2-Windows
 CND_ARTIFACT_NAME_Release=connect_four
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin-Windows/connect_four
-CND_PACKAGE_DIR_Release=dist/Release/Cygwin-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_2-Windows/connect_four
+CND_PACKAGE_DIR_Release=dist/Release/Cygwin_2-Windows/package
 CND_PACKAGE_NAME_Release=connectfour.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin-Windows/package/connectfour.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_2-Windows/package/connectfour.tar
 #
 # include compiler specific variables
 #
