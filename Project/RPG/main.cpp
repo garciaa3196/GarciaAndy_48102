@@ -81,7 +81,7 @@ void House(int &input){
             cin>>input;
             cout<<"-----------------------------------------"<<endl;
             //Input Validation
-            while(input>2||input<1){
+            while(input!=1){
             cout<<"Error - Invalid Choice"<<endl;
             cout<<"1. Go Outside"<<endl;
             cin>>input;
@@ -113,7 +113,7 @@ void Pond(int &input){
     cout<<"1. Chop down tree."<<endl;
     cin>>input;
     cout<<"-----------------------------------------"<<endl;
-    while(input>1||input<1){
+    while(input!=1){
         cout<<"Error - No choice selected"<<endl;
         cout<<"1. Chop down tree."<<endl;
         cin>>input;
@@ -154,7 +154,7 @@ void Pond(int &input){
             if(input2==2){
                 cout<<"1. Talk to Survival Expert"<<endl;
                 cin>>input2;
-                while(input2>1||input2<1){
+                while(input2!=1){
                     cout<<"Error - Invalid Choice"<<endl;
                     cout<<"1. Talk to Survival Expert"<<endl;
                     cin>>input2;
