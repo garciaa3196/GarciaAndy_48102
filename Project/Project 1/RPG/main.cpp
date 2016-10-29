@@ -466,7 +466,6 @@ void Bank(int &input){
 }
 
 void Magic(int &input){
-    
     cout<<"You enter the tower find yourself in the prescence of a Wizard"<<endl;
     cout<<"\n";
     cout<<"Magic Tutor: Greetings young adventurer, you are nearly ready to face \n"
@@ -582,4 +581,5 @@ void End(){
     cout<<"-----------------------------------------"<<endl;
     cout<<"\n";
     cout<<"Thanks for Playing this text-based RPG"<<endl;
+    exit(0);
 }
