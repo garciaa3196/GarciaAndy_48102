@@ -18,7 +18,7 @@ using namespace std;
 //Function Prototypes
 void fillAry(int[],int &);
 void numUser(int[],int &);
-bool Winner(int[],int[],int &);
+bool Winner(int &);
 int matches(int[],int[],int &);
 
 //Program Execution Begins Here
@@ -39,16 +39,16 @@ int main(int argc, char** argv) {
     
     //Matches
     match=matches(lottery,user,SIZE);
+    
     //Results
     cout<<"You have "<<match<<" matches"<<endl; //Number of matches
-    if(Winner(lottery,user,SIZE)==true){
+    if(Winner(match)==true){
         cout<<"Congratulations you win!!"<<endl;
     }
     else{
         cout<<"Sorry, better luck next time"<<endl;
     }
-    
-        
+ 
     //Exit
     return 0;
 }
@@ -66,27 +66,23 @@ void numUser(int user[],int &SIZE){
     //Fill the array
     cout<<"What are your 5 lotto numbers (0-9)"<<endl;
     while(i<SIZE){
-        i++;
         cin>>user[i];
+        i++;
     }
-    
-    
 }
-bool Winner(int lottery[],int user[],int &SIZE){
-    for(int i=0;i<SIZE;i++){
-        if (lottery[i]==user[i]){
-            return true;
-        }
-        else{
-            return false;
-        }
+bool Winner(int &match){
+    if (match==5){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 int matches(int lottery[],int user[],int &SIZE){
     int matches=0;
     for(int i=0;i<SIZE;i++){
         if(lottery[i]==user[i]){
-           matches++; 
+           matches++;
         }
     }
     return matches;
