@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Andy Garcia
- * Created on December 1, 2016, 12:17 PM
- * Purpose: Compare a number with values in an array
+ * Created on December 1, 2016, 4:39 PM
+ * Purpose: Compare a number with values in an array using a binary search
  */
 
 //System Libraries
@@ -16,6 +16,7 @@ using namespace std;
 //Function Prototypes
 int binSrch(int[],int,int);
 void markSrt(int[],int);
+void prntAry(int[],int);
 
 //Program Execution Begins Here
 int main(int argc, char** argv) {
@@ -40,11 +41,14 @@ int main(int argc, char** argv) {
     //Test out minPos
     markSrt(array,SIZE);
     
+    //Print Array
+    prntAry(array,SIZE);
+    
     //Results
     result=binSrch(array,SIZE,num);
     
     //Win?
-    if(result>=1&&result<=10){
+    if(result>=0&&result<=9){
     cout<<"The number "<<num<<" was found at index "<<result<<endl;
     cout<<"Congratulations, you win!!"<<endl;
     }
@@ -67,9 +71,9 @@ int binSrch(int a[],int n,int val){
         else if(a[midPnt]<val){
             begRng=midPnt+1;
         }else if(a[midPnt]>val){
-            endRng=midPnt-1;
+            endRng=midPnt;
         }
-    }while(endRng>begRng);
+    }while(endRng>=begRng);
     return -1;
 }
 void markSrt(int a[],int size){
@@ -80,6 +84,15 @@ void markSrt(int a[],int size){
                 a[j]=a[i]^a[j];
                 a[i]=a[i]^a[j];
             }
+        }
+    }
+}
+void prntAry(int a[],int size){
+    cout<<"The Array"<<endl;
+    for(int i=0;i<size;i++){
+        cout<<a[i]<<" ";
+        if(i%10==9){
+            cout<<endl;
         }
     }
 }
