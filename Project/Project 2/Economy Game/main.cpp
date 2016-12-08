@@ -74,5 +74,19 @@ void fillAry(string a[],int &utilize){
     }
 }
 void rules(){
-    cout<<"This "
+    cout<<"This card game is played with each player having a role. Player 1 is"
+            " the King and Player 8 is the peasant. All other players are "
+            "citizens. The deck is shuffled and all cards are dealt out "
+            " to the players. \n"
+            "To start, the King plays a card start a stack."
+            " This stack can be added to by other players. \n"
+            "Cards can only be added to the stack if they are higher in number "
+            "to the last card in the stack. \n"
+            "If the cards can't be dealt out equally to each player, "
+            "the peasant will be given remaining card. \n"
+            "Players MAY play a double,triple,or quadruple if they have multiple"
+            " of the same card. \n"
+            "Before beginning, the peasant must give the king their highest card "
+            "while the king gives the peasant their lowest card. \n"
+            "The goal of the game is to be the first to have no more cards. \n"
 }
