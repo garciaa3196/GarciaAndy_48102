@@ -20,10 +20,11 @@ using namespace std;
 void fillAry(string [],int&,int);
 void fillDec(int[],int);
 void rules();
-void shuffle(int [],int);
-void prntAry(string [],int);
 void showRole(string[],int);
-
+void shuffle(int [],int);
+void deal(int[],int[],int[],int[],int[],int[],int);
+void prntDk(int[],int);
+void prntNme(string [],int);
 
 //Program Execution Begins Here
 int main(int argc, char** argv) {
@@ -31,11 +32,11 @@ int main(int argc, char** argv) {
     srand(static_cast<unsigned int>(time(0)));
     
     //Declare Variables
-    const int SIZE=52;
-    int deck[SIZE];
-    string play[SIZE];
-    int menu,utilize;
-    
+    const int SIZE=52,HSIZE=10;
+    int deck[SIZE],hand[SIZE];
+    string pName[SIZE];
+    int menu,utilize=5,play1[HSIZE],play2[HSIZE],play3[HSIZE],play4[HSIZE+1],
+            play5[HSIZE+1],turn;  
     
     //Start Menu
     cout<<"Welcome to Economy"<<endl;
@@ -46,9 +47,11 @@ int main(int argc, char** argv) {
     
     //Selection
     if(menu==1){
-        fillAry(play,utilize,SIZE);
+        fillAry(pName,utilize,SIZE);
         fillDec(deck,SIZE);
-        showRole(play,utilize);
+        showRole(pName,utilize);
+        shuffle(deck,SIZE);
+        deal(deck,play1,play2,play3,play4,play5,SIZE);
         
     }
     else if(menu==2){
@@ -63,10 +66,6 @@ int main(int argc, char** argv) {
     return 0;
 }
 void fillAry(string a[],int &utilize,int size){
-    
-    cout<<"How many players are playing? (up to 8, ORDER MATTERS)"<<endl;
-    cin>>utilize;
-    
     cout<<"What is the name of each player?"<<endl;
     for(int i=0;i<utilize;i++){
         cin>>a[i];
@@ -74,7 +73,7 @@ void fillAry(string a[],int &utilize,int size){
 }
 void fillDec(int a[],int size){
     for(int i=0;i<size;i++){
-        a[i]=i+1;
+        a[i]=i;
     }
 }
 void rules(){
@@ -85,7 +84,7 @@ void rules(){
             "- To start, the King plays a card start a stack. "
             "This stack can be added to by other players. \n"
             "- If the cards can't be dealt out equally to each player, "
-            "the peasant will be given remaining card. \n"
+            "the players at the bottom will be given the remaining cards. \n"
             "- Cards can only be added to the stack if they are higher in number "
             "to the last card in the stack. \n"
             "- Go around to each player and ask if they wish to add to the stack. \n"
@@ -104,7 +103,7 @@ void rules(){
             "The order in which run out of cards determines who the "
             "king and peasant are next time."<<endl;
 }
-void prntAry(string a[],int n){
+void prntNme(string a[],int n){
     for(int i=0;i<n;i++){
         cout<<a[i]<<endl;
     }
@@ -114,8 +113,35 @@ void showRole(string a[],int n){
         if(a[i]==a[0]){
             cout<<"King: "<<a[i]<<endl;
         }
-        else if(a[i]==a[7]){
+        else if(a[i]==a[4]){
             cout<<"Peasant: "<<a[i]<<endl;
         }
     }
+}
+void shuffle(int a[],int size){
+    int temp, r;
+    for(int i=size-1;i>=0;i--){
+        r=i+(rand()%(52-i));
+        temp=a[i];
+        a[i]=a[r];
+        a[r]=temp;
+    }
+}
+void prntDk(int a[],int size){
+    for(int i=0;i<size;i++){
+        cout<<a[i]<<" ";
+        if(i%10==9){
+            cout<<endl;
+        }
+    }
+}
+void deal(int deck[],int a[],int b[],int c[],int d[],int e[],int size){
+    int cards=52;
+    while(cards>0){
+        //Deal card one at a time to each player
+        cards--;
+    }
+}
+void swapCrd(int a[],int e[],int hsize){
+    
 }
